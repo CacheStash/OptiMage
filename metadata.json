@@ -1,0 +1,5 @@
+{
+  "name": "OptiImage - Offline Image Tool",
+  "description": "A powerful, offline client-side image optimization tool. Batch compress, resize, and convert images instantly using your browser's capabilities.",
+  "requestFramePermissions": []
+}
