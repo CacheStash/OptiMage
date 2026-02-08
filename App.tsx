@@ -9,8 +9,6 @@ import { ImageCard } from './components/ImageCard';
 import { ImagePreviewModal } from './components/ImagePreviewModal';
 import { FileArchive, Sparkles, Trash2, DownloadCloud, AlertTriangle, Moon, Sun } from 'lucide-react';
 
-const MAX_FILES = 30;
-
 export default function App() {
   const [files, setFiles] = useState<ProcessedImage[]>([]);
   const [settings, setSettings] = useState<ProcessingSettings>({
@@ -60,11 +58,6 @@ export default function App() {
 
   const handleFilesDropped = async (newFiles: File[]) => {
     setGlobalError(null);
-
-    if (files.length + newFiles.length > MAX_FILES) {
-      setGlobalError(`You can only process up to ${MAX_FILES} files at once. Please remove some files first.`);
-      return;
-    }
 
     const newProcessedImages: ProcessedImage[] = newFiles.map(file => ({
       id: generateId(),

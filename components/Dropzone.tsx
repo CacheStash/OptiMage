@@ -80,7 +80,7 @@ export const Dropzone: React.FC<DropzoneProps> = ({ onFilesDropped, disabled }) 
       <p className="text-slate-500 dark:text-slate-400 mb-6 max-w-md mx-auto">
         Or click to browse from your device. Supports JPG, PNG, WEBP.
         <br/>
-        <span className="text-xs text-slate-400 dark:text-slate-500">Max 30 files per batch. Client-side processing only.</span>
+        <span className="text-xs text-slate-400 dark:text-slate-500">Fast client-side processing. Large batches may take a moment.</span>
       </p>
 
       {error && (
